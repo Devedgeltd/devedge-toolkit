@@ -1,1 +1,19 @@
+# changelog.txt
 
+# DevEdge Toolkit Changelog
+
+## 1.5
+- Added GitHub updater header for future automatic updates.
+- Linked post IDs in comments column to post edit screen.
+
+## 1.4
+- Made comment search by post ID show all comments from that post.
+
+## 1.3
+- Added toggle settings for each feature in admin.
+
+## 1.2
+- Added comment post ID display and searchable by post ID.
+
+## 1.0
+- Initial release with post ID search and post ID admin columns.
