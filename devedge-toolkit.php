@@ -4,7 +4,7 @@ Plugin Name: DevEdge Toolkit
 Description: A growing collection of useful WordPress admin enhancements by DevEdge Ltd, starting with search by post ID, displaying post IDs in admin lists, showing post IDs in comments, and making comments searchable by post ID. Now includes automatic GitHub update support.
 Version: 1.5
 Author: <a href="https://devedge.co.uk" target="_blank">DevEdge Ltd</a>
-GitHub Plugin URI: https://github.com/YOUR-GITHUB-USERNAME/devedge-toolkit
+GitHub Plugin URI: https://github.com/Devedgeltd/devedge-toolkit
 */
 
 // Create DevEdge Toolkit settings page
