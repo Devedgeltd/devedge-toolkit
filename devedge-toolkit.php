@@ -2,7 +2,7 @@
 /*
 Plugin Name: DevEdge Toolkit
 Description: A growing collection of useful WordPress admin enhancements by DevEdge Ltd, starting with search by post ID, displaying post IDs in admin lists, showing post IDs in comments, and making comments searchable by post ID. Now includes automatic GitHub update support.
-Version: 1.5
+Version: 1.6
 Author: <a href="https://devedge.co.uk" target="_blank">DevEdge Ltd</a>
 GitHub Plugin URI: https://github.com/Devedgeltd/devedge-toolkit
 */
@@ -104,13 +104,13 @@ add_action( 'manage_comments_custom_column', function( $column, $comment_ID ) {
     }
 }, 10, 2 );
 
-// Make searching comments by post ID display all comments for that post
+// Improve searching comments by post ID to ensure results show
 add_action( 'pre_get_comments', function( $query ) {
-    if ( is_admin() && $query->is_main_query() && !empty( $query->query_vars['search'] ) ) {
-        $search_term = $query->query_vars['search'];
+    if ( is_admin() && $query->is_main_query() && !empty( $query->query_vars['s'] ) ) {
+        $search_term = $query->query_vars['s'];
         if ( is_numeric( $search_term ) ) {
             $query->query_vars['post_id'] = $search_term;
-            $query->query_vars['search'] = '';
+            unset( $query->query_vars['s'] );
         }
     }
 });
