@@ -114,5 +114,3 @@ add_action( 'pre_get_comments', function( $query ) {
         }
     }
 });
-
-// Auto-update integration from GitHub using GitHub Updater or similar system
